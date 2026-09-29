@@ -1,31 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<title>Café Atlas - Marrakech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Atlas - Marrakech Authentique</title>
 <style>
-body{font-family:Arial;background:#fdf6ec;text-align:center;padding:20px}
-h1{color:#6b3f1d;font-size:50px}
-.menu{background:white;padding:20px;border-radius:20px;max-width:600px;margin:20px auto;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
-.item{display:flex;justify-content:space-between;padding:12px;border-bottom:1px solid #eee}
-.price{color:#c27a3a;font-weight:bold}
-.btn{background:#6b3f1d;color:white;padding:15px 30px;border:none;border-radius:30px;font-size:18px;margin-top:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;background:#fdf6ec;color:#4a2c1a}
+.hero{height:60vh;background:url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1200') center/cover;position:relative;display:flex;align-items:center;justify-content:center}
+.hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.45)}
+.hero-text{position:relative;z-index:2;text-align:center;color:white}
+.hero-text h1{font-size:3rem;letter-spacing:2px}
+.hero-text p{font-size:1.2rem;margin-top:10px;opacity:0.9}
+.container{max-width:1000px;margin:-50px auto 0;background:white;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.15);overflow:hidden;position:relative;z-index:3}
+.menu-header{padding:30px;text-align:center;background:#fdf6ec}
+.menu-header h2{font-size:2rem;color:#6b3f2a}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:30px}
+.card{border-radius:15px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.08);transition:0.3s}
+.card:hover{transform:translateY(-5px)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:15px;display:flex;justify-content:space-between;align-items:center}
+.card-body h3{font-size:1rem}
+.price{color:#a05a2c;font-weight:bold;background:#fdf6ec;padding:5px 12px;border-radius:20px}
+.footer{text-align:center;padding:30px}
+.btn{background:#6b3f2a;color:white;padding:14px 30px;border-radius:30px;text-decoration:none;display:inline-block;font-weight:bold;transition:0.3s}
+.btn:hover{background:#4a2c1a;transform:scale(1.05)}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero-text h1{font-size:2rem}}
 </style>
 </head>
 <body>
-<h1>☕ Café Atlas</h1>
-<p>Marrakech - L'Authentique depuis 2010</p>
-
-<div class="menu">
-<h2>Menu dyalna</h2>
-<div class="item"><span>Atay Marrakech</span><span class="price">15 MAD</span></div>
-<div class="item"><span>Café Noir</span><span class="price">18 MAD</span></div>
-<div class="item"><span>Café Crème Atlas</span><span class="price">22 MAD</span></div>
-<div class="item"><span>Msemen + Atay</span><span class="price">30 MAD</span></div>
-<div class="item"><span>Baghrir + 3sel</span><span class="price">28 MAD</span></div>
-<div class="item"><span>Panini Poulet</span><span class="price">35 MAD</span></div>
+<div class="hero">
+  <div class="hero-text">
+    <h1>☕ Café Atlas</h1>
+    <p>Marrakech - L'Authentique depuis 2010 - Guéliz</p>
+  </div>
 </div>
 
-<button class="btn">Commander f WhatsApp</button>
-<p style="margin-top:30px">📍 Guéliz, Marrakech - Ouvert 7h à 23h</p>
+<div class="container">
+  <div class="menu-header">
+    <h2>Menu dyalna - Ftour Marrakchi</h2>
+    <p style="margin-top:8px;color:#8a6a55">Kolchi fresh & fait maison</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600" alt="Atay">
+      <div class="card-body"><h3>🍵 Atay Marrakech</h3><span class="price">15 MAD</span></div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600" alt="Cafe Noir">
+      <div class="card-body"><h3>☕ Café Noir</h3><span class="price">18 MAD</span></div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Cafe Creme">
+      <div class="card-body"><h3>🥛 Café Crème Atlas</h3><span class="price">22 MAD</span></div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600" alt="Msemen">
+      <div class="card-body"><h3>🥞 Msemen + Atay</h3><span class="price">30 MAD</span></div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Baghrir">
+      <div class="card-body"><h3>🍯 Baghrir + 3sel</h3><span class="price">28 MAD</span></div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?w=600" alt="Panini">
+      <div class="card-body"><h3>🥪 Panini Poulet</h3><span class="price">35 MAD</span></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a class="btn" href="https://wa.me/212785521645?text=Salam%20Café%20Atlas%20bghit%20ncommander">📱 Commander f WhatsApp</a>
+    <p style="margin-top:20px;color:#8a6a55">📍 Guéliz, Marrakech - Ouvert 7h à 23h - Livraison gratuite</p>
+  </div>
+</div>
 </body>
 </html>
